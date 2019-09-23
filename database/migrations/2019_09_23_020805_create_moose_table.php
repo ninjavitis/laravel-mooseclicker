@@ -18,7 +18,7 @@ class CreateMooseTable extends Migration
             $table->string('name')->default('');
             $table->string('image')->default('');
             $table->integer('clicks')->default(0);
-            $table->timestamp('last_click')->useCurrent();
+            $table->timestamp('last_click_at')->useCurrent();
             $table->timestamps();
         });
     }
