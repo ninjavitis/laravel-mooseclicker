@@ -16,7 +16,7 @@ class CreateMooseTable extends Migration
         Schema::create('moose', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->default('');
-            $table->binary('image')->nullable();
+            $table->string('image')->default('');
             $table->integer('clicks')->default(0);
             $table->timestamp('last_click')->useCurrent();
             $table->timestamps();
