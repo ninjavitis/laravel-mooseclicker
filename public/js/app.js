@@ -1848,13 +1848,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      current_moose: 1,
       moose: null
     };
   },
   created: function created() {
     var _this = this;
 
-    axios.get('/api/moose/1').then(function (res) {
+    axios.get("/api/moose/".concat(this.current_moose)).then(function (res) {
       _this.moose = res.data;
     });
   }
