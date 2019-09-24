@@ -9,13 +9,13 @@
     export default {
         data(){
           return{
-            current_moose:1,
             moose:null,
           }
         },
         created() {
-            axios.get(`/api/user`)
-            .then(res => {this.moose = res.data});
+            axios.get(`/api/myMoose`)
+            .then(res => this.moose = res.data)
+            .catch(err => console.log(err));
         }
     }
 </script>

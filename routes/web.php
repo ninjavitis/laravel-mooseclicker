@@ -23,3 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/mooses', 'MooseController@index')->name('moose');
+Route::get('/api/myMoose', 'MooseController@myMoose');
+

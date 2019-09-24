@@ -10,7 +10,7 @@ class MooseController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('auth')->only(['index', 'show']);
+        $this->middleware('auth')->only(['index', 'show']);
     }
     /**
      * Display a listing of the resource.
@@ -42,6 +42,11 @@ class MooseController extends Controller
     public function show(Moose $moose): MooseResource
     {
         return new MooseResource($moose);
+    }
+
+    public function myMoose()
+    {
+        return response()->json(Moose::find(auth()->user()->current_moose_id));
     }
 
     /**
