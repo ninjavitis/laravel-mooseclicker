@@ -1855,7 +1855,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios.get("/api/moose/".concat(this.current_moose)).then(function (res) {
+    axios.get("/api/user").then(function (res) {
       _this.moose = res.data;
     });
   }
@@ -37189,7 +37189,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", [_vm._v("I am the walrus.")]),
+    _c("h1", [_vm._v("Click the moose.")]),
     _vm._v("\n  " + _vm._s(_vm.moose) + "\n")
   ])
 }

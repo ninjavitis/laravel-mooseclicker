@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>I am the walrus.</h1>
+    <h1>Click the moose.</h1>
     {{moose}}
   </div>
 </template>
@@ -14,7 +14,7 @@
           }
         },
         created() {
-            axios.get(`/api/moose/${this.current_moose}`)
+            axios.get(`/api/user`)
             .then(res => {this.moose = res.data});
         }
     }
