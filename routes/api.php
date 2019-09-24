@@ -2,6 +2,12 @@
 
 use Illuminate\Http\Request;
 
+\DB::listen(function($sql) {
+    \Log::info($sql->sql);
+    \Log::info($sql->bindings);
+    \Log::info($sql->time);
+});
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +22,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('/moose', 'MooseController');

@@ -3,15 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Resources\MooseResource;
-use App\Moose;
 
-class MooseController extends Controller
+class ExampleAPIController extends Controller
 {
-    public function __construct()
-    {
-        //$this->middleware('auth')->only(['index']);
-    }
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +13,7 @@ class MooseController extends Controller
      */
     public function index()
     {
-        return response()->json(auth()->user()->mooses);
+        //
     }
 
     /**
@@ -39,9 +33,9 @@ class MooseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Moose $moose): MooseResource
+    public function show($id)
     {
-        return new MooseResource($moose);
+        //
     }
 
     /**
