@@ -9,6 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -23,6 +24,8 @@ window.Vue = require('vue');
 Vue.component('home', require('./components/Home.vue').default);
 Vue.component('mooselist', require('./components/Mooselist.vue').default);
 Vue.component('navbar', require('./components/Navbar.vue').default);
+Vue.component('moose', require('./components/Moose.vue').default);
+
 
 const app = new Vue({
     el: '#app',
