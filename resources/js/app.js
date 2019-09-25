@@ -22,6 +22,7 @@ window.Vue = require('vue');
 
 Vue.component('home', require('./components/Home.vue').default);
 Vue.component('mooselist', require('./components/Mooselist.vue').default);
+Vue.component('navbar', require('./components/Navbar.vue').default);
 
 const app = new Vue({
     el: '#app',
