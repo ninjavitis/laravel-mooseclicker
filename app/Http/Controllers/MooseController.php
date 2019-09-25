@@ -49,6 +49,11 @@ class MooseController extends Controller
         return response()->json(Moose::find(auth()->user()->current_moose_id));
     }
 
+    public function mooseClick()
+    {
+        Moose::mooseClick();
+    }
+
     /**
      * Update the specified resource in storage.
      *

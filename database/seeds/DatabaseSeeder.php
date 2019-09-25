@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('moose')->insert([
             'name' => 'Brown Moose',
-            'image' => '',
+            'image' => 'https://www.alaskawildlife.org/wp-content/uploads/2016/12/moose-face.jpg',
             'user_id' => 1,
             'created_at' => now(),
             'updated_at' => now(),

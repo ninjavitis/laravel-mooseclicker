@@ -2,9 +2,9 @@
   <div>
     <h1>Click the moose.</h1>
     <div>
-      {{moose}}
       <b-card
-        img-src="https://picsum.photos/600/300/?image=25"
+        :title='moose.name'
+        :img-src="moose.image"
         img-alt="Image"
         img-top
         tag="article"
@@ -12,7 +12,7 @@
         class="mb-2"
       >
         <b-card-text>
-          {{moose.name}}
+          Clicks: {{moose.clicks}}
         </b-card-text>
       </b-card>
     </div>
