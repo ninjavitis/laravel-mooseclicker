@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Click the moose.</h1>
-    <div>
+    <div >
+      <a href="/mooseClick" class="card-link">
       <b-card
         :title='moose.name'
         :img-src="moose.image"
@@ -11,10 +12,12 @@
         style="max-width: 20rem;"
         class="mb-2"
       >
+      
         <b-card-text>
           Clicks: {{moose.clicks}}
         </b-card-text>
       </b-card>
+      </a>
     </div>
 
 
@@ -33,6 +36,6 @@
             axios.get(`/api/myMoose`)
             .then(res => this.moose = res.data)
             .catch(err => console.log(err));
-        }
+        },
     }
 </script>

@@ -51,7 +51,7 @@ class MooseController extends Controller
 
     public function mooseClick()
     {
-        Moose::mooseClick();
+        (new Moose)->mooseClick(auth()->user()->current_moose_id);
     }
 
     /**

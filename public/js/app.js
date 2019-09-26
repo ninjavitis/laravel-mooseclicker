@@ -1862,6 +1862,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -66546,34 +66549,37 @@ var render = function() {
   return _c("div", [
     _c("h1", [_vm._v("Click the moose.")]),
     _vm._v(" "),
-    _c(
-      "div",
-      [
-        _c(
-          "b-card",
-          {
-            staticClass: "mb-2",
-            staticStyle: { "max-width": "20rem" },
-            attrs: {
-              title: _vm.moose.name,
-              "img-src": _vm.moose.image,
-              "img-alt": "Image",
-              "img-top": "",
-              tag: "article"
-            }
-          },
-          [
-            _c("b-card-text", [
-              _vm._v(
-                "\n        Clicks: " + _vm._s(_vm.moose.clicks) + "\n      "
-              )
-            ])
-          ],
-          1
-        )
-      ],
-      1
-    )
+    _c("div", [
+      _c(
+        "a",
+        { staticClass: "card-link", attrs: { href: "/mooseClick" } },
+        [
+          _c(
+            "b-card",
+            {
+              staticClass: "mb-2",
+              staticStyle: { "max-width": "20rem" },
+              attrs: {
+                title: _vm.moose.name,
+                "img-src": _vm.moose.image,
+                "img-alt": "Image",
+                "img-top": "",
+                tag: "article"
+              }
+            },
+            [
+              _c("b-card-text", [
+                _vm._v(
+                  "\n        Clicks: " + _vm._s(_vm.moose.clicks) + "\n      "
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ])
   ])
 }
 var staticRenderFns = []

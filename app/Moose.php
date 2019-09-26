@@ -13,9 +13,12 @@ class Moose extends Model
     }
 
 
-    public function mooseclick()
+    public function mooseClick($moose_id)
     {
-        $this->clicks += 1;
-        $this->last_click = now();
+        $moose = Moose::find($moose_id);
+        $moose->increment('clicks');
+        $moose->last_click = now();
+
+        return redirect('/');
     }
 }
