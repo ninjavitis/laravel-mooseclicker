@@ -12,6 +12,20 @@ class Moose extends Model
         $this->name = $name;
     }
 
+    public static function create($user_id){
+        $moose = new Moose;
+
+        $moose->user_id = $user_id;
+        $moose->name = 'Brown Moose';
+        $moose->image = 'https://www.alaskawildlife.org/wp-content/uploads/2016/12/moose-face.jpg';
+        $moose->last_click_at = now();
+        $moose->save();
+
+        $user = auth()->user();
+        $user->current_moose_id = $moose->id;
+        $user->save();
+    }
+
 
     public function mooseClick($moose_id)
     {

@@ -7,6 +7,9 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Moose;
+use DB;
+
 
 class RegisterController extends Controller
 {
@@ -63,10 +66,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        // create a new user
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make($data['password'])
         ]);
+
+        // create a new moose for the new user
+        $moose = Moose::create($user->id);
+        
+        return $user;
     }
 }
